@@ -1,0 +1,39 @@
+[project]
+name = "lbutils"
+version = "0.1.0"
+description = "lbutils is a collection of utils helps you build your live-build based live image"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1.6",
+    "requests>=2.32.5",
+]
+
+[dependency-groups]
+dev = [
+    "poethepoet>=0.40.0",
+    "pytest>=9.0.2",
+    "pytest-localserver>=0.10.0",
+    "sphinx>=9.1.0",
+]
+
+[tool.poe.tasks.test]
+help = "Run unit tests"
+cmd  = "python -m pytest"
+
+# https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html
+[tool.poe.tasks.doc-refresh]
+help = "Regenerate document from docstrings"
+cmd = "sphinx-apidoc -o ./docs/source ./src -f"
+
+[tool.poe.tasks.doc-build-html]
+help = "Build document"
+cmd = "sphinx-build -b html ./docs ./docs/_build"
+
+[tool.poe.tasks.doc-clean]
+help = "Cleanup previous built document"
+cmd = "sphinx-build -M clean ./docs/source/ ./docs/_build"
+
+[tool.poe.tasks.doc-build]
+help = "Rebuild document"
+sequence = ["doc-clean", "doc-refresh", "doc-build-html"]
