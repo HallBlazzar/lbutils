@@ -10,6 +10,16 @@ dependencies = [
 ]
 license="Apache-2.0"
 license-files=["LICEN[CS]E*"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/HallBlazzar/lbutils"
+Issues = "https://github.com/HallBlazzar/lbutils/issues"
+Document = "https://hallblazzar.github.io/lbutils/source/index.html"
 
 [dependency-groups]
 dev = [
