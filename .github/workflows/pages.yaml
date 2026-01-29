@@ -43,6 +43,10 @@ jobs:
         with:
           path: docs/_build
   deploy:
+    permissions:
+      id-token: write
+      pages: write
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
