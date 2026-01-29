@@ -1,8 +1,7 @@
 import logging
-import sys
 from pathlib import Path
 
-from lbutils.logger import SimpleFormatter, ConsoleHandler
+from lbutils.logger import ConsoleHandler
 
 # ========== Auto Script Related ==========
 AUTO_SCRIPT_DIR = Path("auto")
