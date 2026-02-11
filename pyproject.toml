@@ -23,6 +23,7 @@ Document = "https://hallblazzar.github.io/lbutils/source/index.html"
 
 [dependency-groups]
 dev = [
+    "build>=1.4.0",
     "poethepoet>=0.40.0",
     "pytest>=9.0.2",
     "pytest-localserver>=0.10.0",

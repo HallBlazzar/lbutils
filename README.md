@@ -1,6 +1,6 @@
 # lbutils
 
-**lbutils** is a library for helping you build customized Debian images.
+**lbutils** is a library helps you build customized Debian images.
 
 Full online document - https://hallblazzar.github.io/lbutils/source/index.html
 
